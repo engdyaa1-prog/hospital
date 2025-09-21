@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الأطباء - مستشفى النبلاء الحديث</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-hospital-symbol"></i>
+                    <span>مستشفى النبلاء الحديث</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="services.html">الخدمات</a></li>
+                    <li><a href="doctors.html" class="active">الأطباء</a></li>
+                    <li><a href="departments.html">الأقسام</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="contact.html">اتصل بنا</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1>فريقنا الطبي المتميز</h1>
+                <p>أطباء متخصصون ذوو خبرة عالية في مختلف التخصصات الطبية</p>
+                <div class="breadcrumb">
+                    <a href="index.html">الرئيسية</a>
+                    <i class="fas fa-chevron-left"></i>
+                    <span>الأطباء</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctors Filter -->
+    <section class="doctors-filter">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">جميع الأطباء</button>
+                <button class="filter-btn" data-filter="cardiology">أمراض القلب</button>
+                <button class="filter-btn" data-filter="neurology">الأمراض العصبية</button>
+                <button class="filter-btn" data-filter="orthopedics">جراحة العظام</button>
+                <button class="filter-btn" data-filter="pediatrics">طب الأطفال</button>
+                <button class="filter-btn" data-filter="ophthalmology">طب العيون</button>
+                <button class="filter-btn" data-filter="emergency">الطوارئ</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctors Grid -->
+    <section class="doctors-section">
+        <div class="container">
+            <div class="doctors-grid">
+                <!-- Cardiology Doctors -->
+                <div class="doctor-card" data-specialty="cardiology">
+                    <div class="doctor-image">
+                        <div class="doctor-placeholder">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <div class="doctor-badge">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <h3>د. أحمد محمد النبلاء</h3>
+                        <p class="specialty">استشاري أمراض القلب والأوعية الدموية</p>
+                        <p class="education">دكتوراه من جامعة هارفارد</p>
+                        <p class="experience">15 سنة خبرة</p>
+                        <div class="doctor-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span>4.9/5</span>
+                        </div>
+                        <div class="doctor-specialties">
+                            <span class="tag">قسطرة القلب</span>
+                            <span class="tag">جراحة القلب</span>
+                            <span class="tag">تخطيط القلب</span>
+                        </div>
+                        <div class="doctor-schedule">
+                            <p><i class="fas fa-clock"></i> السبت - الخميس: 9:00 ص - 5:00 م</p>
+                        </div>
+                        <div class="doctor-contact">
+                            <button class="btn btn-primary">احجز موعد</button>
+                            <button class="btn btn-outline">عرض الملف</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="doctor-card" data-specialty="cardiology">
+                    <div class="doctor-image">
+                        <div class="doctor-placeholder">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <div class="doctor-badge">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <h3>د. سارة عبدالرحمن الطبيب</h3>
+                        <p class="specialty">استشارية أمراض القلب للأطفال</p>
+                        <p class="education">دكتوراه من جامعة أكسفورد</p>
+                        <p class="experience">12 سنة خبرة</p>
+                        <div class="doctor-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span>4.8/5</span>
+                        </div>
+                        <div class="doctor-specialties">
+                            <span class="tag">قلب الأطفال</span>
+                            <span class="tag">العيوب الخلقية</span>
+                            <span class="tag">القسطرة التداخلية</span>
+                        </div>
+                        <div class="doctor-schedule">
+                            <p><i class="fas fa-clock"></i> الأحد - الخميس: 10:00 ص - 6:00 م</p>
+                        </div>
+                        <div class="doctor-contact">
+                            <button class="btn btn-primary">احجز موعد</button>
+                            <button class="btn btn-outline">عرض الملف</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Neurology Doctors -->
+                <div class="doctor-card" data-specialty="neurology">
+                    <div class="doctor-image">
+                        <div class="doctor-placeholder">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <div class="doctor-badge">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <h3>د. فاطمة علي السالم</h3>
+                        <p class="specialty">استشارية الأمراض العصبية والدماغية</p>
+                        <p class="education">دكتوراه من جامعة جونز هوبكنز</p>
+                        <p class="experience">14 سنة خبرة</p>
+                        <div class="doctor-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span>4.9/5</span>
+                        </div>
+                        <div class="doctor-specialties">
+                            <span class="tag">الصرع</span>
+                            <span class="tag">الجلطات الدماغية</span>
+                            <span class="tag">الصداع النصفي</span>
+                        </div>
+                        <div class="doctor-schedule">
+                            <p><i class="fas fa-clock"></i> السبت - الأربعاء: 8:00 ص - 4:00 م</p>
+                        </div>
+                        <div class="doctor-contact">
+                            <button class="btn btn-primary">احجز موعد</button>
+                            <button class="btn btn-outline">عرض الملف</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="doctor-card" data-specialty="neurology">
+                    <div class="doctor-image">
+                        <div class="doctor-placeholder">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <div class="doctor-badge">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <h3>د. خالد محمود العقل</h3>
+                        <p class="specialty">استشاري جراحة الأعصاب والدماغ</p>
+                        <p class="education">دكتوراه من جامعة ستانفورد</p>
+                        <p class="experience">18 سنة خبرة</p>
+                        <div class="doctor-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span>4.9/5</span>
+                        </div>
+                        <div class="doctor-specialties">
+                            <span class="tag">جراحة الدماغ</span>
+                            <span class="tag">أورام الدماغ</span>
+                            <span class="tag">جراحة العمود الفقري</span>
+                        </div>
+                        <div class="doctor-schedule">
+                            <p><i class="fas fa-clock"></i> الأحد - الخميس: 9:00 ص - 5:00 م</p>
+                        </div>
+                        <div class="doctor-contact">
+                            <button class="btn btn-primary">احجز موعد</button>
+                            <button class="btn btn-outline">عرض الملف</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Orthopedics Doctors -->
+                <div class="doctor-card" data-specialty="orthopedics">
+                    <div class="doctor-image">
+                        <div class="doctor-placeholder">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <div class="doctor-badge">
+                            <i class="fas fa-bone"></i>
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <h3>د. محمد عبدالله الحكيم</h3>
+                        <p class="specialty">استشاري جراحة العظام والمفاصل</p>
+                        <p class="education">دكتوراه من جامعة مايو كلينك</p>
+                        <p class="experience">16 سنة خبرة</p>
+                        <div class="doctor-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span>4.8/5</span>
+                        </div>
+                        <div class="doctor-specialties">
+                            <span class="tag">استبدال المفاصل</span>
+                            <span class="tag">جراحة الركبة</span>
+                            <span class="tag">المنظار الجراحي</span>
+                        </div>
+                        <div class="doctor-schedule">
+                            <p><i class="fas fa-clock"></i> السبت - الخميس: 8:00 ص - 4:00 م</p>
+                        </div>
+                        <div class="doctor-contact">
+                            <button class="btn btn-primary">احجز موعد</button>
+                            <button class="btn btn-outline">عرض الملف</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pediatrics Doctors -->
+                <div class="doctor-card" data-specialty="pediatrics">
+                    <div class="doctor-image">
+                        <div class="doctor-placeholder">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <div class="doctor-badge">
+                            <i class="fas fa-baby"></i>
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <h3>د. نورا أحمد الطفل</h3>
+                        <p class="specialty">استشارية طب الأطفال وحديثي الولادة</p>
+                        <p class="education">دكتوراه من جامعة كامبريدج</p>
+                        <p class="experience">13 سنة خبرة</p>
+                        <div class="doctor-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span>4.9/5</span>
+                        </div>
+                        <div class="doctor-specialties">
+                            <span class="tag">حديثي الولادة</span>
+                            <span class="tag">التطعيمات</span>
+                            <span class="tag">نمو الأطفال</span>
+                        </div>
+                        <div class="doctor-schedule">
+                            <p><i class="fas fa-clock"></i> السبت - الخميس: 9:00 ص - 6:00 م</p>
+                        </div>
+                        <div class="doctor-contact">
+                            <button class="btn btn-primary">احجز موعد</button>
+                            <button class="btn btn-outline">عرض الملف</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ophthalmology Doctors -->
+                <div class="doctor-card" data-specialty="ophthalmology">
+                    <div class="doctor-image">
+                        <div class="doctor-placeholder">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <div class="doctor-badge">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <h3>د. عمر سليمان البصير</h3>
+                        <p class="specialty">استشاري طب وجراحة العيون</p>
+                        <p class="education">دكتوراه من جامعة كاليفورنيا</p>
+                        <p class="experience">17 سنة خبرة</p>
+                        <div class="doctor-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span>4.8/5</span>
+                        </div>
+                        <div class="doctor-specialties">
+                            <span class="tag">جراحة الليزك</span>
+                            <span class="tag">المياه البيضاء</span>
+                            <span class="tag">جراحة الشبكية</span>
+                        </div>
+                        <div class="doctor-schedule">
+                            <p><i class="fas fa-clock"></i> الأحد - الخميس: 10:00 ص - 7:00 م</p>
+                        </div>
+                        <div class="doctor-contact">
+                            <button class="btn btn-primary">احجز موعد</button>
+                            <button class="btn btn-outline">عرض الملف</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Emergency Doctors -->
+                <div class="doctor-card" data-specialty="emergency">
+                    <div class="doctor-image">
+                        <div class="doctor-placeholder">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <div class="doctor-badge">
+                            <i class="fas fa-ambulance"></i>
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <h3>د. ياسر محمد الإسعاف</h3>
+                        <p class="specialty">استشاري طب الطوارئ والعناية المركزة</p>
+                        <p class="education">دكتوراه من جامعة تورنتو</p>
+                        <p class="experience">20 سنة خبرة</p>
+                        <div class="doctor-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span>4.9/5</span>
+                        </div>
+                        <div class="doctor-specialties">
+                            <span class="tag">طب الطوارئ</span>
+                            <span class="tag">العناية المركزة</span>
+                            <span class="tag">الإنعاش القلبي</span>
+                        </div>
+                        <div class="doctor-schedule">
+                            <p><i class="fas fa-clock"></i> متاح 24/7 للطوارئ</p>
+                        </div>
+                        <div class="doctor-contact">
+                            <button class="btn btn-emergency">اتصال طوارئ</button>
+                            <button class="btn btn-outline">عرض الملف</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="doctor-card" data-specialty="emergency">
+                    <div class="doctor-image">
+                        <div class="doctor-placeholder">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <div class="doctor-badge">
+                            <i class="fas fa-ambulance"></i>
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <h3>د. ليلى عبدالعزيز النجدة</h3>
+                        <p class="specialty">استشارية طب الطوارئ والصدمات</p>
+                        <p class="education">دكتوراه من جامعة لندن</p>
+                        <p class="experience">15 سنة خبرة</p>
+                        <div class="doctor-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span>4.8/5</span>
+                        </div>
+                        <div class="doctor-specialties">
+                            <span class="tag">إصابات الصدمات</span>
+                            <span class="tag">طب الطوارئ</span>
+                            <span class="tag">الرعاية الحرجة</span>
+                        </div>
+                        <div class="doctor-schedule">
+                            <p><i class="fas fa-clock"></i> متاحة 24/7 للطوارئ</p>
+                        </div>
+                        <div class="doctor-contact">
+                            <button class="btn btn-emergency">اتصال طوارئ</button>
+                            <button class="btn btn-outline">عرض الملف</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Medical Team Stats -->
+    <section class="team-stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3>50+</h3>
+                    <p>طبيب متخصص</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>95%</h3>
+                    <p>حاصلون على الدكتوراه</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>15+</h3>
+                    <p>سنة متوسط الخبرة</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>4.9/5</h3>
+                    <p>تقييم المرضى</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-hospital-symbol"></i>
+                        <span>مستشفى النبلاء الحديث</span>
+                    </div>
+                    <p>نقدم أفضل الخدمات الطبية بأحدث التقنيات والمعدات الطبية المتطورة</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="services.html">الخدمات</a></li>
+                        <li><a href="doctors.html">الأطباء</a></li>
+                        <li><a href="about.html">من نحن</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>الخدمات</h3>
+                    <ul>
+                        <li><a href="#">أمراض القلب</a></li>
+                        <li><a href="#">الأمراض العصبية</a></li>
+                        <li><a href="#">جراحة العظام</a></li>
+                        <li><a href="#">طب الأطفال</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>معلومات الاتصال</h3>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-phone"></i> +966 11 123 4567</p>
+                        <p><i class="fas fa-envelope"></i> info@alnobala-hospital.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> شارع الملك فهد، الرياض</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 مستشفى النبلاء الحديث. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

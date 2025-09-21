@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الخدمات الطبية - مستشفى النبلاء الحديث</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-hospital-symbol"></i>
+                    <span>مستشفى النبلاء الحديث</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="services.html" class="active">الخدمات</a></li>
+                    <li><a href="doctors.html">الأطباء</a></li>
+                    <li><a href="departments.html">الأقسام</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="contact.html">اتصل بنا</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1>خدماتنا الطبية</h1>
+                <p>نقدم مجموعة شاملة من الخدمات الطبية المتخصصة بأحدث التقنيات</p>
+                <div class="breadcrumb">
+                    <a href="index.html">الرئيسية</a>
+                    <i class="fas fa-chevron-left"></i>
+                    <span>الخدمات</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="services-overview">
+        <div class="container">
+            <div class="services-stats">
+                <div class="stat-card">
+                    <i class="fas fa-stethoscope"></i>
+                    <h3>15+</h3>
+                    <p>تخصص طبي</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-user-md"></i>
+                    <h3>50+</h3>
+                    <p>طبيب متخصص</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-hospital"></i>
+                    <h3>200+</h3>
+                    <p>سرير</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-ambulance"></i>
+                    <h3>24/7</h3>
+                    <p>خدمة طوارئ</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Services -->
+    <section class="main-services">
+        <div class="container">
+            <div class="section-header">
+                <h2>التخصصات الطبية الرئيسية</h2>
+                <p>نقدم أفضل الخدمات الطبية في مختلف التخصصات</p>
+            </div>
+            
+            <div class="services-detailed">
+                <!-- Cardiology -->
+                <div class="service-detailed" data-specialty="cardiology" data-description="تشخيص وعلاج أمراض القلب والأوعية: تخطيط القلب، القسطرة التشخيصية والعلاجية، جراحة القلب المفتوح، زراعة منظمات ضربات القلب، رعاية قلبية حرجة.">
+                    <div class="service-image">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>أمراض القلب والأوعية الدموية</h3>
+                        <p>قسم أمراض القلب مجهز بأحدث التقنيات لتشخيص وعلاج جميع أمراض القلب والأوعية الدموية</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> تخطيط القلب الكهربائي</li>
+                            <li><i class="fas fa-check"></i> قسطرة القلب التشخيصية والعلاجية</li>
+                            <li><i class="fas fa-check"></i> جراحة القلب المفتوح</li>
+                            <li><i class="fas fa-check"></i> زراعة أجهزة تنظيم ضربات القلب</li>
+                        </ul>
+                        <div class="service-actions">
+                            <button class="btn btn-primary" data-book-specialty="cardiology">احجز موعد</button>
+                            <button class="btn btn-outline" data-info-specialty="cardiology">المزيد من التفاصيل</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Neurology -->
+                <div class="service-detailed">
+                    <div class="service-image">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>الأمراض العصبية والدماغية</h3>
+                        <p>قسم الأعصاب يضم نخبة من الأطباء المتخصصين في علاج أمراض الجهاز العصبي</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> تشخيص وعلاج الصرع</li>
+                            <li><i class="fas fa-check"></i> علاج الجلطات الدماغية</li>
+                            <li><i class="fas fa-check"></i> جراحة الأعصاب الدقيقة</li>
+                            <li><i class="fas fa-check"></i> علاج الصداع النصفي</li>
+                        </ul>
+                        <div class="service-actions">
+                            <button class="btn btn-primary">احجز موعد</button>
+                            <button class="btn btn-outline">المزيد من التفاصيل</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Orthopedics -->
+                <div class="service-detailed">
+                    <div class="service-image">
+                        <i class="fas fa-bone"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>جراحة العظام والمفاصل</h3>
+                        <p>قسم العظام متخصص في علاج إصابات وأمراض العظام والمفاصل بأحدث التقنيات</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> جراحة استبدال المفاصل</li>
+                            <li><i class="fas fa-check"></i> علاج الكسور المعقدة</li>
+                            <li><i class="fas fa-check"></i> جراحة العمود الفقري</li>
+                            <li><i class="fas fa-check"></i> المنظار الجراحي للمفاصل</li>
+                        </ul>
+                        <div class="service-actions">
+                            <button class="btn btn-primary">احجز موعد</button>
+                            <button class="btn btn-outline">المزيد من التفاصيل</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pediatrics -->
+                <div class="service-detailed">
+                    <div class="service-image">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>طب الأطفال وحديثي الولادة</h3>
+                        <p>قسم الأطفال يوفر رعاية طبية شاملة للأطفال من الولادة حتى سن المراهقة</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> وحدة العناية المركزة للأطفال</li>
+                            <li><i class="fas fa-check"></i> برامج التطعيم الشاملة</li>
+                            <li><i class="fas fa-check"></i> جراحة الأطفال المتخصصة</li>
+                            <li><i class="fas fa-check"></i> علاج اضطرابات النمو</li>
+                        </ul>
+                        <div class="service-actions">
+                            <button class="btn btn-primary">احجز موعد</button>
+                            <button class="btn btn-outline">المزيد من التفاصيل</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ophthalmology -->
+                <div class="service-detailed">
+                    <div class="service-image">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>طب وجراحة العيون</h3>
+                        <p>قسم العيون مجهز بأحدث أجهزة الليزر والمعدات الطبية لعلاج جميع أمراض العيون</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> جراحة الليزك لتصحيح النظر</li>
+                            <li><i class="fas fa-check"></i> علاج المياه البيضاء والزرقاء</li>
+                            <li><i class="fas fa-check"></i> جراحة الشبكية الدقيقة</li>
+                            <li><i class="fas fa-check"></i> زراعة العدسات الداخلية</li>
+                        </ul>
+                        <div class="service-actions">
+                            <button class="btn btn-primary">احجز موعد</button>
+                            <button class="btn btn-outline">المزيد من التفاصيل</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Emergency -->
+                <div class="service-detailed emergency-service">
+                    <div class="service-image">
+                        <i class="fas fa-ambulance"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>خدمات الطوارئ والإسعاف</h3>
+                        <p>قسم الطوارئ يعمل على مدار الساعة لتقديم الرعاية الطبية العاجلة</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> خدمة 24/7 بدون انقطاع</li>
+                            <li><i class="fas fa-check"></i> فريق طبي متخصص في الطوارئ</li>
+                            <li><i class="fas fa-check"></i> وحدة العناية المركزة</li>
+                            <li><i class="fas fa-check"></i> خدمة الإسعاف السريع</li>
+                        </ul>
+                        <div class="service-actions">
+                            <button class="btn btn-emergency">اتصل بالطوارئ</button>
+                            <button class="btn btn-outline">المزيد من التفاصيل</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Services -->
+    <section class="additional-services">
+        <div class="container">
+            <div class="section-header">
+                <h2>خدمات إضافية</h2>
+                <p>مجموعة متنوعة من الخدمات الطبية المساندة</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card" data-info-title="الأشعة والتصوير الطبي" data-info="أحدث أجهزة الرنين المغناطيسي والأشعة المقطعية والتصوير الرقمي والسونار">
+                    <div class="service-icon">
+                        <i class="fas fa-x-ray"></i>
+                    </div>
+                    <h3>الأشعة والتصوير الطبي</h3>
+                    <p>أحدث أجهزة الأشعة والرنين المغناطيسي والأشعة المقطعية</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-vial"></i>
+                    </div>
+                    <h3>المختبرات الطبية</h3>
+                    <p>تحاليل شاملة ودقيقة بأحدث المعدات والتقنيات</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-pills"></i>
+                    </div>
+                    <h3>الصيدلية</h3>
+                    <p>صيدلية متكاملة تضم جميع الأدوية والمستلزمات الطبية</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h3>العلاج الطبيعي</h3>
+                    <p>برامج تأهيل وعلاج طبيعي متخصصة</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user-nurse"></i>
+                    </div>
+                    <h3>التمريض المنزلي</h3>
+                    <p>خدمات تمريض منزلي متخصصة ومدربة</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>الفحص الشامل</h3>
+                    <p>برامج فحص شاملة للكشف المبكر عن الأمراض</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Insurance Partners -->
+    <section class="insurance-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>شركاء التأمين</h2>
+                <p>نتعامل مع جميع شركات التأمين الصحي الرائدة</p>
+            </div>
+            <div class="insurance-grid">
+                <div class="insurance-card"><h4>اليمنية للطيران</h4></div>
+                <div class="insurance-card"><h4>المتخصصة</h4></div>
+                <div class="insurance-card"><h4>الحياة</h4></div>
+                <div class="insurance-card"><h4>الكبوس</h4></div>
+                <div class="insurance-card"><h4>بازرعة</h4></div>
+                <div class="insurance-card"><h4>صندوق المعاقين</h4></div>
+                <div class="insurance-card"><h4>العالمية</h4></div>
+                <div class="insurance-card"><h4>تليمن</h4></div>
+                <div class="insurance-card"><h4>المؤسسة العامة للإسمنت</h4></div>
+                <div class="insurance-card"><h4>كاك للتأمين</h4></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-hospital-symbol"></i>
+                        <span>مستشفى النبلاء الحديث</span>
+                    </div>
+                    <p>نقدم أفضل الخدمات الطبية بأحدث التقنيات والمعدات الطبية المتطورة</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="services.html">الخدمات</a></li>
+                        <li><a href="doctors.html">الأطباء</a></li>
+                        <li><a href="about.html">من نحن</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>الخدمات</h3>
+                    <ul>
+                        <li><a href="#">أمراض القلب</a></li>
+                        <li><a href="#">الأمراض العصبية</a></li>
+                        <li><a href="#">جراحة العظام</a></li>
+                        <li><a href="#">طب الأطفال</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>معلومات الاتصال</h3>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-phone"></i> 780480480</p>
+                        <p><i class="fas fa-phone-volume"></i> طوارئ: 779977926</p>
+                        <p><i class="fas fa-envelope"></i> info@alnobala-hospital.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> الجمهورية اليمنية، صنعاء، سعوان، دوار الأربعين، مستشفى النبلاء الحديث</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 مستشفى النبلاء الحديث. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

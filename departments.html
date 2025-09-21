@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الأقسام - مستشفى النبلاء الحديث</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Enhanced Medical Background Animation -->
+    <div class="medical-background">
+        <div class="ecg-line"></div>
+        <div class="ecg-line"></div>
+        <div class="ecg-line"></div>
+        <div class="ecg-line"></div>
+        <div class="ecg-line"></div>
+        <div class="pulse-circle"></div>
+        <div class="pulse-circle"></div>
+        <div class="pulse-circle"></div>
+        <div class="pulse-circle"></div>
+        <div class="pulse-circle"></div>
+        <i class="fas fa-heartbeat medical-icon"></i>
+        <i class="fas fa-stethoscope medical-icon"></i>
+        <i class="fas fa-user-md medical-icon"></i>
+        <i class="fas fa-pills medical-icon"></i>
+        <i class="fas fa-syringe medical-icon"></i>
+        <i class="fas fa-microscope medical-icon"></i>
+        <i class="fas fa-dna medical-icon"></i>
+        <i class="fas fa-lungs medical-icon"></i>
+    </div>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-hospital-symbol"></i>
+                    <span>مستشفى النبلاء الحديث</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="services.html">الخدمات</a></li>
+                    <li><a href="doctors.html">الأطباء</a></li>
+                    <li><a href="departments.html" class="active">الأقسام</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="contact.html">اتصل بنا</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1>أقسام المستشفى</h1>
+                <p>تعرف على الأقسام المختلفة والمرافق المتطورة في مستشفى النبلاء الحديث</p>
+                <div class="breadcrumb">
+                    <a href="index.html">الرئيسية</a>
+                    <i class="fas fa-chevron-left"></i>
+                    <span>الأقسام</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hospital Map Section -->
+    <section class="hospital-map">
+        <div class="container">
+            <div class="section-header">
+                <h2>خريطة المستشفى</h2>
+                <p>تصفح أقسام المستشفى حسب الطوابق</p>
+            </div>
+            
+            <div class="map-container">
+                <div class="floor-tabs">
+                    <button class="floor-tab active" onclick="showFloor('basement')">
+                        <i class="fas fa-arrow-down"></i>
+                        البدروم
+                    </button>
+                    <button class="floor-tab" onclick="showFloor('ground')">
+                        <i class="fas fa-home"></i>
+                        الدور الأرضي
+                    </button>
+                    <button class="floor-tab" onclick="showFloor('second')">
+                        <i class="fas fa-arrow-up"></i>
+                        الدور الثاني
+                    </button>
+                    <button class="floor-tab" onclick="showFloor('third')">
+                        <i class="fas fa-procedures"></i>
+                        الدور الثالث
+                    </button>
+                    <button class="floor-tab" onclick="showFloor('fourth')">
+                        <i class="fas fa-baby"></i>
+                        الدور الرابع
+                    </button>
+                    <button class="floor-tab" onclick="showFloor('fifth')">
+                        <i class="fas fa-bed"></i>
+                        الدور الخامس
+                    </button>
+                </div>
+                
+                <!-- Basement Floor -->
+                <div class="floor-map active" id="basement">
+                    <h3>البدروم</h3>
+                    <div class="floor-layout">
+                        <div class="department-room" data-info="قسم الأشعة المقطعية - أحدث أجهزة التصوير المقطعي">
+                            <i class="fas fa-x-ray"></i>
+                            <h4>الأشعة المقطعية</h4>
+                        </div>
+                        <div class="department-room" data-info="قسم الأشعة التشخيصية والتلفزيونية - تشخيص دقيق بأحدث التقنيات">
+                            <i class="fas fa-microscope"></i>
+                            <h4>الأشعة التشخيصية</h4>
+                        </div>
+                        <div class="department-room" data-info="قسم الأشعة الرقمية السينية - تصوير رقمي عالي الجودة">
+                            <i class="fas fa-camera"></i>
+                            <h4>الأشعة الرقمية</h4>
+                        </div>
+                        <div class="department-room" data-info="قسم العلاج الطبيعي - إعادة التأهيل والعلاج الطبيعي">
+                            <i class="fas fa-dumbbell"></i>
+                            <h4>العلاج الطبيعي</h4>
+                        </div>
+                        <div class="department-room" data-info="قسم الحسابات العامة - إدارة الشؤون المالية">
+                            <i class="fas fa-calculator"></i>
+                            <h4>الحسابات العامة</h4>
+                        </div>
+                        <div class="department-room" data-info="مصلى خاص بالرجال - مكان مخصص للصلاة">
+                            <i class="fas fa-mosque"></i>
+                            <h4>مصلى الرجال</h4>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Ground Floor -->
+                <div class="floor-map" id="ground">
+                    <h3>الدور الأرضي</h3>
+                    <div class="floor-layout">
+                        <div class="department-room emergency-dept" data-info="قسم الطوارئ العامة - خدمات طوارئ على مدار الساعة">
+                            <i class="fas fa-ambulance"></i>
+                            <h4>الطوارئ العامة</h4>
+                        </div>
+                        <div class="department-room" data-info="الصيدلية المركزية - جميع الأدوية والمستلزمات الطبية">
+                            <i class="fas fa-pills"></i>
+                            <h4>الصيدلية المركزية</h4>
+                        </div>
+                        <div class="department-room" data-info="الاستقبال والريسبشن - استقبال المرضى والزوار">
+                            <i class="fas fa-desk"></i>
+                            <h4>الاستقبال</h4>
+                        </div>
+                        <div class="department-room" data-info="حسابات النزلاء - إدارة حسابات المرضى المقيمين">
+                            <i class="fas fa-file-invoice"></i>
+                            <h4>حسابات النزلاء</h4>
+                        </div>
+                        <div class="department-room" data-info="التموين الطبي - إدارة المستلزمات والمعدات الطبية">
+                            <i class="fas fa-boxes"></i>
+                            <h4>التموين الطبي</h4>
+                        </div>
+                        <div class="department-room" data-info="كافتيريا مارك - خدمات الطعام والمشروبات">
+                            <i class="fas fa-coffee"></i>
+                            <h4>كافتيريا مارك</h4>
+                        </div>
+                        <div class="department-room" data-info="الرهونات والأمانات - حفظ الأمانات والمتعلقات الشخصية">
+                            <i class="fas fa-safe"></i>
+                            <h4>الرهونات والأمانات</h4>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Second Floor -->
+                <div class="floor-map" id="second">
+                    <h3>الدور الثاني</h3>
+                    <div class="floor-layout">
+                        <div class="department-room" data-info="العيادات الخارجية - استشارات طبية متخصصة">
+                            <i class="fas fa-user-md"></i>
+                            <h4>العيادات الخارجية</h4>
+                        </div>
+                        <div class="department-room" data-info="المختبر - فحوصات طبية شاملة ودقيقة">
+                            <i class="fas fa-flask"></i>
+                            <h4>المختبر</h4>
+                        </div>
+                        <div class="department-room" data-info="الموارد البشرية - إدارة شؤون الموظفين">
+                            <i class="fas fa-users"></i>
+                            <h4>الموارد البشرية</h4>
+                        </div>
+                        <div class="department-room" data-info="الصندوق - الخدمات المالية والمحاسبية">
+                            <i class="fas fa-cash-register"></i>
+                            <h4>الصندوق</h4>
+                        </div>
+                        <div class="department-room" data-info="الإدارة العامة - إدارة عمليات المستشفى">
+                            <i class="fas fa-building"></i>
+                            <h4>الإدارة العامة</h4>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Third Floor -->
+                <div class="floor-map" id="third">
+                    <h3>الدور الثالث</h3>
+                    <div class="floor-layout">
+                        <div class="department-room" data-info="قسم العمليات - غرف عمليات مجهزة بأحدث التقنيات">
+                            <i class="fas fa-procedures"></i>
+                            <h4>قسم العمليات</h4>
+                        </div>
+                        <div class="department-room" data-info="صيدلية العمليات - أدوية ومستلزمات العمليات الجراحية">
+                            <i class="fas fa-prescription-bottle"></i>
+                            <h4>صيدلية العمليات</h4>
+                        </div>
+                        <div class="department-room" data-info="الصيدلية الداخلية - خدمات صيدلانية للمرضى المقيمين">
+                            <i class="fas fa-capsules"></i>
+                            <h4>الصيدلية الداخلية</h4>
+                        </div>
+                        <div class="department-room" data-info="قسم الرقود الخاص - غرف إقامة مريحة ومجهزة">
+                            <i class="fas fa-bed"></i>
+                            <h4>الرقود الخاص</h4>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Fourth Floor -->
+                <div class="floor-map" id="fourth">
+                    <h3>الدور الرابع</h3>
+                    <div class="floor-layout">
+                        <div class="department-room" data-info="قسم الولادة - رعاية شاملة للأمهات والمواليد">
+                            <i class="fas fa-baby-carriage"></i>
+                            <h4>قسم الولادة</h4>
+                        </div>
+                        <div class="department-room" data-info="قسم الحضانة - رعاية متخصصة للأطفال حديثي الولادة">
+                            <i class="fas fa-baby"></i>
+                            <h4>قسم الحضانة</h4>
+                        </div>
+                        <div class="department-room" data-info="قسم العناية المركزة - رعاية طبية مكثفة على مدار الساعة">
+                            <i class="fas fa-heartbeat"></i>
+                            <h4>العناية المركزة</h4>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Fifth Floor -->
+                <div class="floor-map" id="fifth">
+                    <h3>الدور الخامس</h3>
+                    <div class="floor-layout">
+                        <div class="department-room" data-info="الرقود العام - غرف إقامة مريحة للمرضى">
+                            <i class="fas fa-procedures"></i>
+                            <h4>الرقود العام</h4>
+                        </div>
+                        <div class="department-room" data-info="الرقود الخاص - غرف فاخرة مع خدمات متميزة">
+                            <i class="fas fa-crown"></i>
+                            <h4>الرقود الخاص</h4>
+                        </div>
+                        <div class="department-room" data-info="الأجنحة الفاخرة - أجنحة مجهزة بأعلى معايير الراحة">
+                            <i class="fas fa-gem"></i>
+                            <h4>الأجنحة الفاخرة</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Department Info Tooltip -->
+            <div class="department-tooltip" id="departmentTooltip">
+                <div class="tooltip-content"></div>
+            </div>
+        </div>
+    </section>
+
+    
+    
+    <!-- Departments Details -->
+    <section class="departments-details">
+        <div class="container">
+            <div class="section-header">
+                <h2>تفاصيل الأقسام</h2>
+                <p>معلومات شاملة عن كل قسم ومرافقه</p>
+            </div>
+            
+            <div class="departments-grid">
+                <!-- Emergency Department -->
+                <div class="department-card emergency-dept">
+                    <div class="dept-header">
+                        <div class="dept-icon">
+                            <i class="fas fa-ambulance"></i>
+                        </div>
+                        <div class="dept-info">
+                            <h3>قسم الطوارئ</h3>
+                            <p>خدمة 24/7</p>
+                        </div>
+                        <div class="dept-status">
+                            <span class="status-badge active">متاح الآن</span>
+                        </div>
+                    </div>
+                    <div class="dept-content">
+                        <div class="dept-features">
+                            <div class="feature-item">
+                                <i class="fas fa-bed"></i>
+                                <span>20 سرير طوارئ</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-user-md"></i>
+                                <span>5 أطباء متخصصين</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-heartbeat"></i>
+                                <span>أجهزة إنعاش متطورة</span>
+                            </div>
+                        </div>
+                        <div class="dept-description">
+                            <p>قسم الطوارئ مجهز بأحدث المعدات الطبية ويعمل على مدار الساعة لتقديم الرعاية العاجلة للحالات الطارئة.</p>
+                        </div>
+                        <div class="dept-contact">
+                            <button class="btn btn-emergency">اتصال طوارئ</button>
+                            <span class="phone-number">780480480</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ICU Department -->
+                <div class="department-card">
+                    <div class="dept-header">
+                        <div class="dept-icon">
+                            <i class="fas fa-procedures"></i>
+                        </div>
+                        <div class="dept-info">
+                            <h3>العناية المركزة</h3>
+                            <p>رعاية مكثفة متخصصة</p>
+                        </div>
+                        <div class="dept-status">
+                            <span class="status-badge active">متاح</span>
+                        </div>
+                    </div>
+                    <div class="dept-content">
+                        <div class="dept-features">
+                            <div class="feature-item">
+                                <i class="fas fa-bed"></i>
+                                <span>15 سرير عناية مركزة</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-monitor-heart-rate"></i>
+                                <span>أجهزة مراقبة متطورة</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-lungs"></i>
+                                <span>أجهزة تنفس صناعي</span>
+                            </div>
+                        </div>
+                        <div class="dept-description">
+                            <p>وحدة العناية المركزة مخصصة للمرضى الذين يحتاجون إلى مراقبة مستمرة ورعاية طبية مكثفة.</p>
+                        </div>
+                        <div class="dept-contact">
+                            <button class="btn btn-primary">معلومات أكثر</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Surgery Department -->
+                <div class="department-card">
+                    <div class="dept-header">
+                        <div class="dept-icon">
+                            <i class="fas fa-cut"></i>
+                        </div>
+                        <div class="dept-info">
+                            <h3>غرف العمليات</h3>
+                            <p>جراحات متخصصة</p>
+                        </div>
+                        <div class="dept-status">
+                            <span class="status-badge busy">مشغول</span>
+                        </div>
+                    </div>
+                    <div class="dept-content">
+                        <div class="dept-features">
+                            <div class="feature-item">
+                                <i class="fas fa-procedures"></i>
+                                <span>8 غرف عمليات حديثة</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-robot"></i>
+                                <span>جراحة بالمنظار</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-shield-virus"></i>
+                                <span>بيئة معقمة 100%</span>
+                            </div>
+                        </div>
+                        <div class="dept-description">
+                            <p>غرف عمليات مجهزة بأحدث التقنيات الجراحية وأنظمة التعقيم المتطورة لضمان أعلى معايير السلامة.</p>
+                        </div>
+                        <div class="dept-contact">
+                            <button class="btn btn-primary">احجز عملية</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Radiology Department -->
+                <div class="department-card">
+                    <div class="dept-header">
+                        <div class="dept-icon">
+                            <i class="fas fa-x-ray"></i>
+                        </div>
+                        <div class="dept-info">
+                            <h3>قسم الأشعة</h3>
+                            <p>تصوير طبي متقدم</p>
+                        </div>
+                        <div class="dept-status">
+                            <span class="status-badge active">متاح</span>
+                        </div>
+                    </div>
+                    <div class="dept-content">
+                        <div class="dept-features">
+                            <div class="feature-item">
+                                <i class="fas fa-brain"></i>
+                                <span>رنين مغناطيسي</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-lungs"></i>
+                                <span>أشعة مقطعية</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-bone"></i>
+                                <span>أشعة عادية</span>
+                            </div>
+                        </div>
+                        <div class="dept-description">
+                            <p>قسم الأشعة مجهز بأحدث أجهزة التصوير الطبي لتشخيص دقيق وسريع للحالات المختلفة.</p>
+                        </div>
+                        <div class="dept-contact">
+                            <button class="btn btn-primary">احجز موعد</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Laboratory -->
+                <div class="department-card">
+                    <div class="dept-header">
+                        <div class="dept-icon">
+                            <i class="fas fa-vial"></i>
+                        </div>
+                        <div class="dept-info">
+                            <h3>المختبر الطبي</h3>
+                            <p>تحاليل شاملة</p>
+                        </div>
+                        <div class="dept-status">
+                            <span class="status-badge active">متاح</span>
+                        </div>
+                    </div>
+                    <div class="dept-content">
+                        <div class="dept-features">
+                            <div class="feature-item">
+                                <i class="fas fa-microscope"></i>
+                                <span>تحاليل دم شاملة</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-dna"></i>
+                                <span>تحاليل جينية</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-virus"></i>
+                                <span>تحاليل الأمراض المعدية</span>
+                            </div>
+                        </div>
+                        <div class="dept-description">
+                            <p>مختبر طبي متطور يقدم جميع أنواع التحاليل الطبية بدقة عالية ونتائج سريعة.</p>
+                        </div>
+                        <div class="dept-contact">
+                            <button class="btn btn-primary">احجز تحليل</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pharmacy -->
+                <div class="department-card">
+                    <div class="dept-header">
+                        <div class="dept-icon">
+                            <i class="fas fa-pills"></i>
+                        </div>
+                        <div class="dept-info">
+                            <h3>الصيدلية</h3>
+                            <p>أدوية ومستلزمات طبية</p>
+                        </div>
+                        <div class="dept-status">
+                            <span class="status-badge active">مفتوح</span>
+                        </div>
+                    </div>
+                    <div class="dept-content">
+                        <div class="dept-features">
+                            <div class="feature-item">
+                                <i class="fas fa-prescription-bottle"></i>
+                                <span>أدوية متنوعة</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-user-check"></i>
+                                <span>صيادلة مختصون</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-clock"></i>
+                                <span>خدمة 24 ساعة</span>
+                            </div>
+                        </div>
+                        <div class="dept-description">
+                            <p>صيدلية شاملة تضم جميع الأدوية والمستلزمات الطبية مع فريق صيادلة مختصين.</p>
+                        </div>
+                        <div class="dept-contact">
+                            <button class="btn btn-primary">زيارة الصيدلية</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities 
+    <section class="facilities-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>المرافق والخدمات</h2>
+                <p>مرافق متطورة لراحة المرضى وذويهم</p>
+            </div>
+            
+            <div class="facilities-grid">
+                <div class="facility-card">
+                    <div class="facility-icon">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <h4>إنترنت مجاني</h4>
+                    <p>خدمة واي فاي مجانية في جميع أنحاء المستشفى</p>
+                </div>
+                
+                <div class="facility-card">
+                    <div class="facility-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h4>مواقف سيارات</h4>
+                    <p>مواقف واسعة ومجانية للمرضى والزوار</p>
+                </div>
+                
+                <div class="facility-card">
+                    <div class="facility-icon">
+                        <i class="fas fa-coffee"></i>
+                    </div>
+                    <h4>كافتيريا</h4>
+                    <p>كافتيريا حديثة تقدم وجبات صحية ومشروبات</p>
+                </div>
+                
+                <div class="facility-card">
+                    <div class="facility-icon">
+                        <i class="fas fa-pray"></i>
+                    </div>
+                    <h4>مصلى</h4>
+                    <p>مصلى مجهز للرجال والنساء</p>
+                </div>
+                
+                <div class="facility-card">
+                    <div class="facility-icon">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <h4>غرفة الأطفال</h4>
+                    <p>منطقة لعب آمنة ومريحة للأطفال</p>
+                </div>
+                
+                <div class="facility-card">
+                    <div class="facility-icon">
+                        <i class="fas fa-wheelchair"></i>
+                    </div>
+                    <h4>مرافق للمعاقين</h4>
+                    <p>مرافق مصممة خصيصاً لذوي الاحتياجات الخاصة</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-hospital-symbol"></i>
+                        <span>مستشفى النبلاء الحديث</span>
+                    </div>
+                    <p>نقدم أفضل الخدمات الطبية بأحدث التقنيات والمعدات الطبية المتطورة</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="services.html">الخدمات</a></li>
+                        <li><a href="doctors.html">الأطباء</a></li>
+                        <li><a href="about.html">من نحن</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>الخدمات</h3>
+                    <ul>
+                        <li><a href="#">أمراض القلب</a></li>
+                        <li><a href="#">الأمراض العصبية</a></li>
+                        <li><a href="#">جراحة العظام</a></li>
+                        <li><a href="#">طب الأطفال</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>معلومات الاتصال</h3>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-phone"></i> +966 11 123 4567</p>
+                        <p><i class="fas fa-envelope"></i> info@alnobala-hospital.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> شارع الملك فهد، الرياض</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 مستشفى النبلاء الحديث. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Button -->
+    <div class="floating-action-container">
+        <div class="floating-actions" id="floatingActions">
+            <div class="floating-btn-wrapper">
+                <button class="floating-btn call-btn" onclick="makeCall()" title="اتصال خط ساخن" aria-label="اتصال خط ساخن 780480480">
+                    <i class="fas fa-phone"></i>
+                </button>
+                <span class="floating-btn-label">اتصال خط ساخن</span>
+            </div>
+            <div class="floating-btn-wrapper">
+                <button class="floating-btn whatsapp-btn" onclick="openWhatsApp()" title="واتس اب" aria-label="واتس اب 780480480">
+                    <i class="fab fa-whatsapp"></i>
+                </button>
+                <span class="floating-btn-label">واتس اب</span>
+            </div>
+            <div class="floating-btn-wrapper">
+                <button class="floating-btn reservation-btn" onclick="showReservationModal()" title="حجز موعد" aria-label="حجز موعد">
+                    <i class="fas fa-calendar-plus"></i>
+                </button>
+                <span class="floating-btn-label">حجز موعد</span>
+            </div>
+        </div>
+        <button class="floating-main-btn" onclick="toggleFloatingActions()" id="floatingMainBtn">
+            <i class="fas fa-plus"></i>
+        </button>
+    </div> 
+
+
+    <!-- Hospital Map Section -->
+    <section class="hospital-map">
+        <div class="container">
+            <div class="section-header">
+                <h2>خريطة المستشفى</h2>
+                <p>تصفح أقسام المستشفى حسب الطوابق</p>
+            </div>
+            
+            <div class="map-container">
+                <div class="floor-tabs">
+                    <button class="floor-tab active" onclick="showFloor('basement')">
+                        <i class="fas fa-arrow-down"></i>
+                        البدروم
+                    </button>
+                    <button class="floor-tab" onclick="showFloor('ground')">
+                        <i class="fas fa-home"></i>
+                        الدور الأرضي
+                    </button>
+                    <button class="floor-tab" onclick="showFloor('second')">
+                        <i class="fas fa-arrow-up"></i>
+                        الدور الثاني
+                    </button>
+                    <button class="floor-tab" onclick="showFloor('third')">
+                        <i class="fas fa-procedures"></i>
+                        الدور الثالث
+                    </button>
+                    <button class="floor-tab" onclick="showFloor('fourth')">
+                        <i class="fas fa-baby"></i>
+                        الدور الرابع
+                    </button>
+                    <button class="floor-tab" onclick="showFloor('fifth')">
+                        <i class="fas fa-bed"></i>
+                        الدور الخامس
+                    </button>
+                </div>
+                
+                <!-- Basement Floor -->
+                <div class="floor-map active" id="basement">
+                    <h3>البدروم</h3>
+                    <div class="floor-layout">
+                        <div class="department-room" data-info="قسم الأشعة المقطعية - أحدث أجهزة التصوير المقطعي">
+                            <i class="fas fa-x-ray"></i>
+                            <h4>الأشعة المقطعية</h4>
+                        </div>
+                        <div class="department-room" data-info="قسم الأشعة التشخيصية والتلفزيونية - تشخيص دقيق بأحدث التقنيات">
+                            <i class="fas fa-microscope"></i>
+                            <h4>الأشعة التشخيصية</h4>
+                        </div>
+                        <div class="department-room" data-info="قسم الأشعة الرقمية السينية - تصوير رقمي عالي الجودة">
+                            <i class="fas fa-camera"></i>
+                            <h4>الأشعة الرقمية</h4>
+                        </div>
+                        <div class="department-room" data-info="قسم العلاج الطبيعي - إعادة التأهيل والعلاج الطبيعي">
+                            <i class="fas fa-dumbbell"></i>
+                            <h4>العلاج الطبيعي</h4>
+                        </div>
+                        <div class="department-room" data-info="قسم الحسابات العامة - إدارة الشؤون المالية">
+                            <i class="fas fa-calculator"></i>
+                            <h4>الحسابات العامة</h4>
+                        </div>
+                        <div class="department-room" data-info="مصلى خاص بالرجال - مكان مخصص للصلاة">
+                            <i class="fas fa-mosque"></i>
+                            <h4>مصلى الرجال</h4>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Ground Floor -->
+                <div class="floor-map" id="ground">
+                    <h3>الدور الأرضي</h3>
+                    <div class="floor-layout">
+                        <div class="department-room emergency-dept" data-info="قسم الطوارئ العامة - خدمات طوارئ على مدار الساعة">
+                            <i class="fas fa-ambulance"></i>
+                            <h4>الطوارئ العامة</h4>
+                        </div>
+                        <div class="department-room" data-info="الصيدلية المركزية - جميع الأدوية والمستلزمات الطبية">
+                            <i class="fas fa-pills"></i>
+                            <h4>الصيدلية المركزية</h4>
+                        </div>
+                        <div class="department-room" data-info="الاستقبال والريسبشن - استقبال المرضى والزوار">
+                            <i class="fas fa-desk"></i>
+                            <h4>الاستقبال</h4>
+                        </div>
+                        <div class="department-room" data-info="حسابات النزلاء - إدارة حسابات المرضى المقيمين">
+                            <i class="fas fa-file-invoice"></i>
+                            <h4>حسابات النزلاء</h4>
+                        </div>
+                        <div class="department-room" data-info="التموين الطبي - إدارة المستلزمات والمعدات الطبية">
+                            <i class="fas fa-boxes"></i>
+                            <h4>التموين الطبي</h4>
+                        </div>
+                        <div class="department-room" data-info="كافتيريا مارك - خدمات الطعام والمشروبات">
+                            <i class="fas fa-coffee"></i>
+                            <h4>كافتيريا مارك</h4>
+                        </div>
+                        <div class="department-room" data-info="الرهونات والأمانات - حفظ الأمانات والمتعلقات الشخصية">
+                            <i class="fas fa-safe"></i>
+                            <h4>الرهونات والأمانات</h4>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Second Floor -->
+                <div class="floor-map" id="second">
+                    <h3>الدور الثاني</h3>
+                    <div class="floor-layout">
+                        <div class="department-room" data-info="العيادات الخارجية - استشارات طبية متخصصة">
+                            <i class="fas fa-user-md"></i>
+                            <h4>العيادات الخارجية</h4>
+                        </div>
+                        <div class="department-room" data-info="المختبر - فحوصات طبية شاملة ودقيقة">
+                            <i class="fas fa-flask"></i>
+                            <h4>المختبر</h4>
+                        </div>
+                        <div class="department-room" data-info="الموارد البشرية - إدارة شؤون الموظفين">
+                            <i class="fas fa-users"></i>
+                            <h4>الموارد البشرية</h4>
+                        </div>
+                        <div class="department-room" data-info="الصندوق - الخدمات المالية والمحاسبية">
+                            <i class="fas fa-cash-register"></i>
+                            <h4>الصندوق</h4>
+                        </div>
+                        <div class="department-room" data-info="الإدارة العامة - إدارة عمليات المستشفى">
+                            <i class="fas fa-building"></i>
+                            <h4>الإدارة العامة</h4>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Third Floor -->
+                <div class="floor-map" id="third">
+                    <h3>الدور الثالث</h3>
+                    <div class="floor-layout">
+                        <div class="department-room" data-info="قسم العمليات - غرف عمليات مجهزة بأحدث التقنيات">
+                            <i class="fas fa-procedures"></i>
+                            <h4>قسم العمليات</h4>
+                        </div>
+                        <div class="department-room" data-info="صيدلية العمليات - أدوية ومستلزمات العمليات الجراحية">
+                            <i class="fas fa-prescription-bottle"></i>
+                            <h4>صيدلية العمليات</h4>
+                        </div>
+                        <div class="department-room" data-info="الصيدلية الداخلية - خدمات صيدلانية للمرضى المقيمين">
+                            <i class="fas fa-capsules"></i>
+                            <h4>الصيدلية الداخلية</h4>
+                        </div>
+                        <div class="department-room" data-info="قسم الرقود الخاص - غرف إقامة مريحة ومجهزة">
+                            <i class="fas fa-bed"></i>
+                            <h4>الرقود الخاص</h4>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Fourth Floor -->
+                <div class="floor-map" id="fourth">
+                    <h3>الدور الرابع</h3>
+                    <div class="floor-layout">
+                        <div class="department-room" data-info="قسم الولادة - رعاية شاملة للأمهات والمواليد">
+                            <i class="fas fa-baby-carriage"></i>
+                            <h4>قسم الولادة</h4>
+                        </div>
+                        <div class="department-room" data-info="قسم الحضانة - رعاية متخصصة للأطفال حديثي الولادة">
+                            <i class="fas fa-baby"></i>
+                            <h4>قسم الحضانة</h4>
+                        </div>
+                        <div class="department-room" data-info="قسم العناية المركزة - رعاية طبية مكثفة على مدار الساعة">
+                            <i class="fas fa-heartbeat"></i>
+                            <h4>العناية المركزة</h4>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Fifth Floor -->
+                <div class="floor-map" id="fifth">
+                    <h3>الدور الخامس</h3>
+                    <div class="floor-layout">
+                        <div class="department-room" data-info="الرقود العام - غرف إقامة مريحة للمرضى">
+                            <i class="fas fa-procedures"></i>
+                            <h4>الرقود العام</h4>
+                        </div>
+                        <div class="department-room" data-info="الرقود الخاص - غرف فاخرة مع خدمات متميزة">
+                            <i class="fas fa-crown"></i>
+                            <h4>الرقود الخاص</h4>
+                        </div>
+                        <div class="department-room" data-info="الأجنحة الفاخرة - أجنحة مجهزة بأعلى معايير الراحة">
+                            <i class="fas fa-gem"></i>
+                            <h4>الأجنحة الفاخرة</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Department Info Tooltip -->
+            <div class="department-tooltip" id="departmentTooltip">
+                <div class="tooltip-content"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
