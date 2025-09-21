@@ -5129,3 +5129,61 @@ html {
     border-radius: 999px;
     font-weight: 700;
 }
+
+/* ================= Responsive ================= */
+@media (max-width: 768px) {
+  .services-grid,
+  .services-detailed,
+  .doctors-grid,
+  .departments-grid,
+  .insurance-grid,
+  .vision-mission-grid,
+  .accommodation-grid,
+  .stats-grid,
+  .news-grid { grid-template-columns: 1fr !important; }
+
+  .service-detailed,
+  .department-card,
+  .doctor-card { padding: 14px !important; }
+
+  .filter-buttons { display: flex; flex-wrap: wrap; gap: 8px; }
+  .filter-buttons .filter-btn { padding: 6px 10px; font-size: 0.9rem; }
+
+  .hero .hero-content { flex-direction: column; gap: 14px; }
+  .hero .hero-text h1 { font-size: 1.6rem; }
+  .hero .hero-text h2 { font-size: 1.1rem; }
+  .hero-logo { max-width: 180px; height: auto; }
+
+  .modal-content,
+  .emergency-content { max-width: 92vw !important; padding: 1rem !important; }
+
+  /* Containers and spacing */
+  .container { padding-left: 12px !important; padding-right: 12px !important; }
+
+  /* Navbar mobile drawer */
+  .navbar .nav-menu { 
+    position: fixed; 
+    top: 60px; 
+    right: 0; 
+    left: 0; 
+    background: rgba(255,255,255,0.98); 
+    backdrop-filter: blur(4px);
+    display: none; 
+    flex-direction: column; 
+    gap: 10px; 
+    padding: 12px 16px; 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    z-index: 9999;
+  }
+  .navbar .nav-menu.active { display: flex; }
+  .navbar .hamburger { display: inline-flex; }
+
+  /* Floating actions position */
+  .floating-action-container { right: 12px !important; bottom: 12px !important; }
+  .fab-container { right: 12px !important; bottom: 12px !important; }
+}
+
+/* Global responsive safeguards */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { max-width: 100%; overflow-x: hidden; }
+img, video { max-width: 100%; height: auto; display: block; }

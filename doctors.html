@@ -54,12 +54,17 @@
         <div class="container">
             <div class="filter-buttons">
                 <button class="filter-btn active" data-filter="all">جميع الأطباء</button>
-                <button class="filter-btn" data-filter="cardiology">أمراض القلب</button>
-                <button class="filter-btn" data-filter="neurology">الأمراض العصبية</button>
+                <button class="filter-btn" data-filter="general_surgery">جراحة عامة</button>
                 <button class="filter-btn" data-filter="orthopedics">جراحة العظام</button>
-                <button class="filter-btn" data-filter="pediatrics">طب الأطفال</button>
+                <button class="filter-btn" data-filter="internal">الباطنية</button>
+                <button class="filter-btn" data-filter="neurology">المخ والأعصاب</button>
+                <button class="filter-btn" data-filter="ent">أنف وأذن وحنجرة</button>
+                <button class="filter-btn" data-filter="gynecology">نساء وولادة</button>
                 <button class="filter-btn" data-filter="ophthalmology">طب العيون</button>
-                <button class="filter-btn" data-filter="emergency">الطوارئ</button>
+                <button class="filter-btn" data-filter="dentistry">الأسنان</button>
+                <button class="filter-btn" data-filter="plastic">التجميل</button>
+                <button class="filter-btn" data-filter="dermatology">الجلدية</button>
+                <button class="filter-btn" data-filter="urology">المسالك البولية</button>
             </div>
         </div>
     </section>
@@ -68,358 +73,19 @@
     <section class="doctors-section">
         <div class="container">
             <div class="doctors-grid">
-                <!-- Cardiology Doctors -->
-                <div class="doctor-card" data-specialty="cardiology">
+                <!-- سيتم توليد البطاقات ديناميكياً أدناه -->
+                <div class="doctor-card" data-specialty="sample" style="display:none">
                     <div class="doctor-image">
                         <div class="doctor-placeholder">
                             <i class="fas fa-user-md"></i>
                         </div>
-                        <div class="doctor-badge">
-                            <i class="fas fa-heart"></i>
-                        </div>
+                        <div class="doctor-badge"><i class="fas fa-user-md"></i></div>
                     </div>
                     <div class="doctor-info">
-                        <h3>د. أحمد محمد النبلاء</h3>
-                        <p class="specialty">استشاري أمراض القلب والأوعية الدموية</p>
-                        <p class="education">دكتوراه من جامعة هارفارد</p>
-                        <p class="experience">15 سنة خبرة</p>
-                        <div class="doctor-rating">
-                            <div class="stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <span>4.9/5</span>
-                        </div>
-                        <div class="doctor-specialties">
-                            <span class="tag">قسطرة القلب</span>
-                            <span class="tag">جراحة القلب</span>
-                            <span class="tag">تخطيط القلب</span>
-                        </div>
-                        <div class="doctor-schedule">
-                            <p><i class="fas fa-clock"></i> السبت - الخميس: 9:00 ص - 5:00 م</p>
-                        </div>
+                        <h3>الاسم</h3>
+                        <p class="specialty">التخصص</p>
                         <div class="doctor-contact">
                             <button class="btn btn-primary">احجز موعد</button>
-                            <button class="btn btn-outline">عرض الملف</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="doctor-card" data-specialty="cardiology">
-                    <div class="doctor-image">
-                        <div class="doctor-placeholder">
-                            <i class="fas fa-user-md"></i>
-                        </div>
-                        <div class="doctor-badge">
-                            <i class="fas fa-heart"></i>
-                        </div>
-                    </div>
-                    <div class="doctor-info">
-                        <h3>د. سارة عبدالرحمن الطبيب</h3>
-                        <p class="specialty">استشارية أمراض القلب للأطفال</p>
-                        <p class="education">دكتوراه من جامعة أكسفورد</p>
-                        <p class="experience">12 سنة خبرة</p>
-                        <div class="doctor-rating">
-                            <div class="stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <span>4.8/5</span>
-                        </div>
-                        <div class="doctor-specialties">
-                            <span class="tag">قلب الأطفال</span>
-                            <span class="tag">العيوب الخلقية</span>
-                            <span class="tag">القسطرة التداخلية</span>
-                        </div>
-                        <div class="doctor-schedule">
-                            <p><i class="fas fa-clock"></i> الأحد - الخميس: 10:00 ص - 6:00 م</p>
-                        </div>
-                        <div class="doctor-contact">
-                            <button class="btn btn-primary">احجز موعد</button>
-                            <button class="btn btn-outline">عرض الملف</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Neurology Doctors -->
-                <div class="doctor-card" data-specialty="neurology">
-                    <div class="doctor-image">
-                        <div class="doctor-placeholder">
-                            <i class="fas fa-user-md"></i>
-                        </div>
-                        <div class="doctor-badge">
-                            <i class="fas fa-brain"></i>
-                        </div>
-                    </div>
-                    <div class="doctor-info">
-                        <h3>د. فاطمة علي السالم</h3>
-                        <p class="specialty">استشارية الأمراض العصبية والدماغية</p>
-                        <p class="education">دكتوراه من جامعة جونز هوبكنز</p>
-                        <p class="experience">14 سنة خبرة</p>
-                        <div class="doctor-rating">
-                            <div class="stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <span>4.9/5</span>
-                        </div>
-                        <div class="doctor-specialties">
-                            <span class="tag">الصرع</span>
-                            <span class="tag">الجلطات الدماغية</span>
-                            <span class="tag">الصداع النصفي</span>
-                        </div>
-                        <div class="doctor-schedule">
-                            <p><i class="fas fa-clock"></i> السبت - الأربعاء: 8:00 ص - 4:00 م</p>
-                        </div>
-                        <div class="doctor-contact">
-                            <button class="btn btn-primary">احجز موعد</button>
-                            <button class="btn btn-outline">عرض الملف</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="doctor-card" data-specialty="neurology">
-                    <div class="doctor-image">
-                        <div class="doctor-placeholder">
-                            <i class="fas fa-user-md"></i>
-                        </div>
-                        <div class="doctor-badge">
-                            <i class="fas fa-brain"></i>
-                        </div>
-                    </div>
-                    <div class="doctor-info">
-                        <h3>د. خالد محمود العقل</h3>
-                        <p class="specialty">استشاري جراحة الأعصاب والدماغ</p>
-                        <p class="education">دكتوراه من جامعة ستانفورد</p>
-                        <p class="experience">18 سنة خبرة</p>
-                        <div class="doctor-rating">
-                            <div class="stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <span>4.9/5</span>
-                        </div>
-                        <div class="doctor-specialties">
-                            <span class="tag">جراحة الدماغ</span>
-                            <span class="tag">أورام الدماغ</span>
-                            <span class="tag">جراحة العمود الفقري</span>
-                        </div>
-                        <div class="doctor-schedule">
-                            <p><i class="fas fa-clock"></i> الأحد - الخميس: 9:00 ص - 5:00 م</p>
-                        </div>
-                        <div class="doctor-contact">
-                            <button class="btn btn-primary">احجز موعد</button>
-                            <button class="btn btn-outline">عرض الملف</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Orthopedics Doctors -->
-                <div class="doctor-card" data-specialty="orthopedics">
-                    <div class="doctor-image">
-                        <div class="doctor-placeholder">
-                            <i class="fas fa-user-md"></i>
-                        </div>
-                        <div class="doctor-badge">
-                            <i class="fas fa-bone"></i>
-                        </div>
-                    </div>
-                    <div class="doctor-info">
-                        <h3>د. محمد عبدالله الحكيم</h3>
-                        <p class="specialty">استشاري جراحة العظام والمفاصل</p>
-                        <p class="education">دكتوراه من جامعة مايو كلينك</p>
-                        <p class="experience">16 سنة خبرة</p>
-                        <div class="doctor-rating">
-                            <div class="stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <span>4.8/5</span>
-                        </div>
-                        <div class="doctor-specialties">
-                            <span class="tag">استبدال المفاصل</span>
-                            <span class="tag">جراحة الركبة</span>
-                            <span class="tag">المنظار الجراحي</span>
-                        </div>
-                        <div class="doctor-schedule">
-                            <p><i class="fas fa-clock"></i> السبت - الخميس: 8:00 ص - 4:00 م</p>
-                        </div>
-                        <div class="doctor-contact">
-                            <button class="btn btn-primary">احجز موعد</button>
-                            <button class="btn btn-outline">عرض الملف</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Pediatrics Doctors -->
-                <div class="doctor-card" data-specialty="pediatrics">
-                    <div class="doctor-image">
-                        <div class="doctor-placeholder">
-                            <i class="fas fa-user-md"></i>
-                        </div>
-                        <div class="doctor-badge">
-                            <i class="fas fa-baby"></i>
-                        </div>
-                    </div>
-                    <div class="doctor-info">
-                        <h3>د. نورا أحمد الطفل</h3>
-                        <p class="specialty">استشارية طب الأطفال وحديثي الولادة</p>
-                        <p class="education">دكتوراه من جامعة كامبريدج</p>
-                        <p class="experience">13 سنة خبرة</p>
-                        <div class="doctor-rating">
-                            <div class="stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <span>4.9/5</span>
-                        </div>
-                        <div class="doctor-specialties">
-                            <span class="tag">حديثي الولادة</span>
-                            <span class="tag">التطعيمات</span>
-                            <span class="tag">نمو الأطفال</span>
-                        </div>
-                        <div class="doctor-schedule">
-                            <p><i class="fas fa-clock"></i> السبت - الخميس: 9:00 ص - 6:00 م</p>
-                        </div>
-                        <div class="doctor-contact">
-                            <button class="btn btn-primary">احجز موعد</button>
-                            <button class="btn btn-outline">عرض الملف</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Ophthalmology Doctors -->
-                <div class="doctor-card" data-specialty="ophthalmology">
-                    <div class="doctor-image">
-                        <div class="doctor-placeholder">
-                            <i class="fas fa-user-md"></i>
-                        </div>
-                        <div class="doctor-badge">
-                            <i class="fas fa-eye"></i>
-                        </div>
-                    </div>
-                    <div class="doctor-info">
-                        <h3>د. عمر سليمان البصير</h3>
-                        <p class="specialty">استشاري طب وجراحة العيون</p>
-                        <p class="education">دكتوراه من جامعة كاليفورنيا</p>
-                        <p class="experience">17 سنة خبرة</p>
-                        <div class="doctor-rating">
-                            <div class="stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <span>4.8/5</span>
-                        </div>
-                        <div class="doctor-specialties">
-                            <span class="tag">جراحة الليزك</span>
-                            <span class="tag">المياه البيضاء</span>
-                            <span class="tag">جراحة الشبكية</span>
-                        </div>
-                        <div class="doctor-schedule">
-                            <p><i class="fas fa-clock"></i> الأحد - الخميس: 10:00 ص - 7:00 م</p>
-                        </div>
-                        <div class="doctor-contact">
-                            <button class="btn btn-primary">احجز موعد</button>
-                            <button class="btn btn-outline">عرض الملف</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Emergency Doctors -->
-                <div class="doctor-card" data-specialty="emergency">
-                    <div class="doctor-image">
-                        <div class="doctor-placeholder">
-                            <i class="fas fa-user-md"></i>
-                        </div>
-                        <div class="doctor-badge">
-                            <i class="fas fa-ambulance"></i>
-                        </div>
-                    </div>
-                    <div class="doctor-info">
-                        <h3>د. ياسر محمد الإسعاف</h3>
-                        <p class="specialty">استشاري طب الطوارئ والعناية المركزة</p>
-                        <p class="education">دكتوراه من جامعة تورنتو</p>
-                        <p class="experience">20 سنة خبرة</p>
-                        <div class="doctor-rating">
-                            <div class="stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <span>4.9/5</span>
-                        </div>
-                        <div class="doctor-specialties">
-                            <span class="tag">طب الطوارئ</span>
-                            <span class="tag">العناية المركزة</span>
-                            <span class="tag">الإنعاش القلبي</span>
-                        </div>
-                        <div class="doctor-schedule">
-                            <p><i class="fas fa-clock"></i> متاح 24/7 للطوارئ</p>
-                        </div>
-                        <div class="doctor-contact">
-                            <button class="btn btn-emergency">اتصال طوارئ</button>
-                            <button class="btn btn-outline">عرض الملف</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="doctor-card" data-specialty="emergency">
-                    <div class="doctor-image">
-                        <div class="doctor-placeholder">
-                            <i class="fas fa-user-md"></i>
-                        </div>
-                        <div class="doctor-badge">
-                            <i class="fas fa-ambulance"></i>
-                        </div>
-                    </div>
-                    <div class="doctor-info">
-                        <h3>د. ليلى عبدالعزيز النجدة</h3>
-                        <p class="specialty">استشارية طب الطوارئ والصدمات</p>
-                        <p class="education">دكتوراه من جامعة لندن</p>
-                        <p class="experience">15 سنة خبرة</p>
-                        <div class="doctor-rating">
-                            <div class="stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <span>4.8/5</span>
-                        </div>
-                        <div class="doctor-specialties">
-                            <span class="tag">إصابات الصدمات</span>
-                            <span class="tag">طب الطوارئ</span>
-                            <span class="tag">الرعاية الحرجة</span>
-                        </div>
-                        <div class="doctor-schedule">
-                            <p><i class="fas fa-clock"></i> متاحة 24/7 للطوارئ</p>
-                        </div>
-                        <div class="doctor-contact">
-                            <button class="btn btn-emergency">اتصال طوارئ</button>
                             <button class="btn btn-outline">عرض الملف</button>
                         </div>
                     </div>
@@ -502,9 +168,10 @@
                 <div class="footer-section">
                     <h3>معلومات الاتصال</h3>
                     <div class="footer-contact">
-                        <p><i class="fas fa-phone"></i> +966 11 123 4567</p>
-                        <p><i class="fas fa-envelope"></i> info@alnobala-hospital.com</p>
-                        <p><i class="fas fa-map-marker-alt"></i> شارع الملك فهد، الرياض</p>
+                        <p><i class="fas fa-phone"></i> 780480480</p>
+                        <p><i class="fas fa-phone-volume"></i> طوارئ: 779977926</p>
+                        <p><i class="fas fa-envelope"></i> info@nobles-m-h.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> الجمهورية اليمنية، صنعاء، سعوان، دوار الأربعين، مستشفى النبلاء الحديث</p>
                     </div>
                 </div>
             </div>
@@ -515,5 +182,74 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+      // توليد قائمة الأطباء من البيانات المقدمة
+      const doctorData = [
+        { n:'عبدالرحمن العمراني', s:'جراحة عامة', k:'general_surgery' },
+        { n:'عبد الله نصار', s:'عظام', k:'orthopedics' },
+        { n:'علي الصبري', s:'عظام', k:'orthopedics' },
+        { n:'محمد علي الحمودي', s:'باطنية', k:'internal' },
+        { n:'محمد العواضي', s:'باطنية', k:'internal' },
+        { n:'عبد القادر الموشكي', s:'باطنية', k:'internal' },
+        { n:'طه القحوم', s:'مخ وأعصاب', k:'neurology' },
+        { n:'محمد الجرباني', s:'مخ وأعصاب', k:'neurology' },
+        { n:'اكرم الحضرمي', s:'مخ وأعصاب', k:'neurology' },
+        { n:'علي غالب القرن', s:'مخ وأعصاب', k:'neurology' },
+        { n:'مازن المخلافي', s:'عظام', k:'orthopedics' },
+        { n:'شوقي المدومي', s:'أنف وأذن وحنجرة', k:'ent' },
+        { n:'مروان البركاني', s:'أنف وأذن وحنجرة', k:'ent' },
+        { n:'توفيق البركاني', s:'أنف وأذن وحنجرة', k:'ent' },
+        { n:'اوسان الزريقي', s:'نساء وولادة', k:'gynecology' },
+        { n:'دعاء الجباوي', s:'نساء وولادة', k:'gynecology' },
+        { n:'بلقيس السماوي', s:'عيون', k:'ophthalmology' },
+        { n:'امل عبد الواحد', s:'عيون', k:'ophthalmology' },
+        { n:'الا الكوري', s:'أسنان', k:'dentistry' },
+        { n:'دعاء العقبي', s:'أسنان', k:'dentistry' },
+        { n:'معين حسين', s:'أسنان', k:'dentistry' },
+        { n:'شيماء الغيلي', s:'تجميل', k:'plastic' },
+        { n:'سحر القدسي', s:'جلدية', k:'dermatology' },
+        { n:'حسين السعدي', s:'مخ وأعصاب', k:'neurology' },
+        { n:'محمد الشوابي', s:'مسالك بولية', k:'urology' },
+        { n:'علي الخالد', s:'مسالك بولية', k:'urology' },
+        { n:'مؤمن الشيباني', s:'مسالك بولية', k:'urology' },
+      ];
+
+      const grid = document.querySelector('.doctors-grid');
+      if (grid) {
+        grid.innerHTML = '';
+        doctorData.forEach(d => {
+          const card = document.createElement('div');
+          card.className = 'doctor-card';
+          card.setAttribute('data-specialty', d.k);
+          card.innerHTML = `
+            <div class="doctor-image">
+              <div class="doctor-placeholder"><i class="fas fa-user-md"></i></div>
+              <div class="doctor-badge"><i class="fas fa-user-md"></i></div>
+            </div>
+            <div class="doctor-info">
+              <h3>د. ${d.n}</h3>
+              <p class="specialty">${d.s}</p>
+              <div class="doctor-contact">
+                <button class="btn btn-primary" onclick="showAppointmentModal()">احجز موعد</button>
+                <button class="btn btn-outline">عرض الملف</button>
+              </div>
+            </div>`;
+          grid.appendChild(card);
+        });
+      }
+
+      // تفعيل الفلترة البسيطة
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+          btn.classList.add('active');
+          const f = btn.getAttribute('data-filter');
+          document.querySelectorAll('.doctor-card').forEach(c => {
+            const match = f === 'all' || c.getAttribute('data-specialty') === f;
+            c.style.display = match ? '' : 'none';
+          });
+        });
+      });
+    </script>
 </body>
 </html>
